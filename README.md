@@ -88,7 +88,6 @@ Therefore, after constructing the actual physical environment according to the A
 
 <img src="modify.PNG" width="600">
 
-
 In the Anchor code, the communication frame must be configured according to the Anchor number.
 
 <img src="Tag_CF.PNG" width="600">
@@ -105,3 +104,13 @@ For example, if the Anchor number is 3, the communication frame number in the An
 
 The image above shows the communication frames used in the Anchor code. The number `1` should be changed to `3` when configuring the code for Anchor 3.
 This means that you only need to create four separate Anchor code files with different Anchor numbers and upload each one to the corresponding board.
+
+# Notes
+
+1. In 3D position estimation, if all Anchors are placed on the same plane, the system may not be able to obtain a valid 3D solution.  
+   This is because the linearized matrix can become singular or ill-conditioned.
+
+2. Due to DOP limitations, the x and y positions can be estimated relatively well, while the z-axis position may be less accurate.
+
+3. To improve z-axis estimation, additional sensor fusion or a 3D Anchor geometry is required.  
+   For example, placing Anchors at sufficiently different heights can improve the vertical observability of the system.
