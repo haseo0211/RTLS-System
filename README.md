@@ -104,4 +104,4 @@ For example, if the Anchor number is 3, the communication frame number in the An
 <img src="Anchor_CF.PNG" width="600">
 
 The image above shows the communication frames used in the Anchor code. The number `1` should be changed to `3` when configuring the code for Anchor 3.
-
+This means that you only need to create four separate Anchor code files with different Anchor numbers and upload each one to the corresponding board.
