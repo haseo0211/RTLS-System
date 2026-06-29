@@ -14,7 +14,7 @@ When the Tag moves inside the area formed by the Anchors, the RTLS system estima
 
 Although the RTLS area can be freely defined by adjusting the Anchor positions, this system is configured in a 10 m x 10 m indoor space.
 
-<img src="rtls_system_config.png" width="600">
+<img src="images/rtls_system_config.png" width="600">
 
 The system described below is based on the configuration shown in the figure above.
 
@@ -86,11 +86,11 @@ In the Tag code, all related components are generalized based on the mathematica
 
 Therefore, after constructing the actual physical environment according to the Anchor numbers and positions used in your implementation, the system can operate by setting the Anchor coordinates in the Tag code to match the real Anchor coordinates.
 
-<img src="modify.PNG" width="600">
+<img src="images/modify.PNG" width="600">
 
 In the Anchor code, the communication frame must be configured according to the Anchor number.
 
-<img src="Tag_CF.PNG" width="600">
+<img src="images/Tag_CF.PNG" width="600">
 
 The image above shows the communication frames used in the Tag code.
 The numbers 1, 2, 3, and 4 indicate the communication frames corresponding to each Anchor.
@@ -100,7 +100,7 @@ However, in RTLS System, both the `Poll` and `Resp` message frames must be modif
 
 For example, if the Anchor number is 3, the communication frame number in the Anchor code must be changed from 1 to 3 before uploading the code to the board.
 
-<img src="Anchor_CF.PNG" width="600">
+<img src="images/Anchor_CF.PNG" width="600">
 
 The image above shows the communication frames used in the Anchor code. The number `1` should be changed to `3` when configuring the code for Anchor 3.
 This means that you only need to create four separate Anchor code files with different Anchor numbers and upload each one to the corresponding board.
