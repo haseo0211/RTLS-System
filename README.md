@@ -80,7 +80,7 @@ $$
 \mathbf{x} = A^{-1}\mathbf{b}
 $$
 
-# How to use
+# How to Use
 
 In the Tag code, all related components are generalized based on the mathematical formulation described above.
 
@@ -90,12 +90,15 @@ In the Anchor code, the communication frame must be configured according to the 
 
 <img src="Tag_CF.PNG" width="600">
 
-The following image shows the communication frames used in the Tag code.
+The image above shows the communication frames used in the Tag code.
 The numbers 1, 2, 3, and 4 indicate the communication frames corresponding to each Anchor.
-In This Image, only 'Poll' messeage 만 나와있음. you have to modify "Resp" message
 
-요약하면, If your Anchor Number is 3, 
+In this image, only the `Poll` messages are shown.
+However, in RTLS System, both the `Poll` and `Resp` message frames must be modified according to the Anchor number.
 
-After downloading the Anchor code, modify the number according to each Anchor so that the Tag can communicate with the correct Anchor.
+For example, if the Anchor number is 3, the communication frame number in the Anchor code must be changed from 1 to 3 before uploading the code to the board.
 
+<img src="Anchor_CF.PNG" width="600">
+
+The image above shows the communication frames used in the Anchor code. The number `1` should be changed to `3` when configuring the code for Anchor 3.
 
