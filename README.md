@@ -14,3 +14,8 @@ When the Tag moves inside the area formed by the Anchors, the RTLS system estima
 
 Although the RTLS area can be freely defined by adjusting the Anchor positions, this system is configured in a 10 m x 10 m indoor space.
 
+<img src="rtls_system_config.png" width="600">
+
+The system described below is based on the configuration shown in the figure above.
+
+# Simple Mathematical Theory
