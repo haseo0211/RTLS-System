@@ -19,3 +19,78 @@ Although the RTLS area can be freely defined by adjusting the Anchor positions, 
 The system described below is based on the configuration shown in the figure above.
 
 # Simple Mathematical Theory
+
+The position of the Tag is defined as:
+
+$$
+\mathbf{x} = [x, y, z]^T
+$$
+
+The position of the i-th Anchor is defined as:
+
+$$
+\mathbf{p}_i = [x_i, y_i, z_i]^T
+$$
+
+The distance between the Tag and the i-th Anchor is defined as:
+
+$$
+r_i
+$$
+
+Then, the range equation between the Tag and each Anchor can be written as:
+
+$$
+\|\mathbf{x} - \mathbf{p}_i\|^2 = r_i^2, \quad i = 1,2,3,4
+$$
+
+Since this equation is nonlinear, the first Anchor is used as a reference to linearize the system.
+
+By subtracting the equation of Anchor 1 from the remaining equations, the following linear system can be obtained:
+
+$$
+A\mathbf{x} = \mathbf{b}
+$$
+
+where
+
+$$
+A =
+\begin{bmatrix}
+2(x_2 - x_1) & 2(y_2 - y_1) & 2(z_2 - z_1) \\
+2(x_3 - x_1) & 2(y_3 - y_1) & 2(z_3 - z_1) \\
+2(x_4 - x_1) & 2(y_4 - y_1) & 2(z_4 - z_1)
+\end{bmatrix}
+$$
+
+and
+
+$$
+\mathbf{b} =
+\begin{bmatrix}
+(r_1^2 - r_2^2) + (\||\mathbf{p}_2\||^2 - \||\mathbf{p}_1\||^2) \\
+(r_1^2 - r_3^2) + (\||\mathbf{p}_3\||^2 - \||\mathbf{p}_1\||^2) \\
+(r_1^2 - r_4^2) + (\||\mathbf{p}_4\||^2 - \||\mathbf{p}_1\||^2)
+\end{bmatrix}
+$$
+
+If the matrix \(A\) is invertible, the Tag position can be calculated as:
+
+$$
+\mathbf{x} = A^{-1}\mathbf{b}
+$$
+
+# How to use
+
+In the Tag code, all related components are generalized based on the mathematical formulation described above.
+
+Therefore, after constructing the actual physical environment according to the Anchor numbers and positions used in your implementation, the system can operate by setting the Anchor coordinates in the Tag code to match the real Anchor coordinates.
+
+In the Anchor code, the communication frame must be configured according to the Anchor number.
+
+
+
+The following image shows the communication frames used in the Tag code.
+The numbers 1, 2, 3, and 4 indicate the communication frames corresponding to each Anchor.
+
+After downloading the Anchor code, modify the number according to each Anchor so that the Tag can communicate with the correct Anchor.
