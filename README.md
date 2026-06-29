@@ -88,7 +88,7 @@ Therefore, after constructing the actual physical environment according to the A
 
 In the Anchor code, the communication frame must be configured according to the Anchor number.
 
-
+<img src="Tag_CF.PNG" width="600">
 
 The following image shows the communication frames used in the Tag code.
 The numbers 1, 2, 3, and 4 indicate the communication frames corresponding to each Anchor.
