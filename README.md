@@ -92,5 +92,10 @@ In the Anchor code, the communication frame must be configured according to the 
 
 The following image shows the communication frames used in the Tag code.
 The numbers 1, 2, 3, and 4 indicate the communication frames corresponding to each Anchor.
+In This Image, only 'Poll' messeage 만 나와있음. you have to modify "Resp" message
+
+요약하면, If your Anchor Number is 3, 
 
 After downloading the Anchor code, modify the number according to each Anchor so that the Tag can communicate with the correct Anchor.
+
+
