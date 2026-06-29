@@ -86,6 +86,9 @@ In the Tag code, all related components are generalized based on the mathematica
 
 Therefore, after constructing the actual physical environment according to the Anchor numbers and positions used in your implementation, the system can operate by setting the Anchor coordinates in the Tag code to match the real Anchor coordinates.
 
+<img src="modify.PNG" width="600">
+
+
 In the Anchor code, the communication frame must be configured according to the Anchor number.
 
 <img src="Tag_CF.PNG" width="600">
