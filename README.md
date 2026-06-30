@@ -105,6 +105,20 @@ For example, if the Anchor number is 3, the communication frame number in the An
 The image above shows the communication frames used in the Anchor code. The number `1` should be changed to `3` when configuring the code for Anchor 3.
 This means that you only need to create four separate Anchor code files with different Anchor numbers and upload each one to the corresponding board.
 
+# Timing Sequence
+
+The designed RTLS system follows the timing sequence shown in the figure below.  
+
+<img src="images/RTLS_Timing_Sequence.PNG" width="600">
+
+This figure illustrates an ideal case in which the communication process is successfully established.  
+In actual experiments, however, the system may not always operate as ideally as shown in the figure.
+
+Based on my experience implementing this RTLS system and applying it to several projects, the configured timing sequence generally operated without major issues.  
+This was confirmed while using approximately 7 to 8 identical UWB modules.
+
+If you want to modify the timing sequence, refer to the official Makerfabs GitHub repository and API Guide, and adjust the implementation according to your own system requirements.
+
 # Notes
 
 1. In 3D position estimation, if all Anchors are placed on the same plane, the system may not be able to obtain a valid 3D solution.  
