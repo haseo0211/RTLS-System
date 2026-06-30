@@ -107,9 +107,10 @@ This means that you only need to create four separate Anchor code files with dif
 
 # Timing Sequence
 
-The designed RTLS system follows the timing sequence shown in the figure below.  
+The designed RTLS system follows the timing sequence shown in the figure below. 
 
 <img src="images/RTLS_Timing_Sequence.PNG" width="600">
+(1 UUS is approximately equal to 1 μs.)
 
 This figure illustrates an ideal case in which the communication process is successfully established.  
 In actual experiments, however, the system may not always operate as ideally as shown in the figure.
