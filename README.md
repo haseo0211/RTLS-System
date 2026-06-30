@@ -41,7 +41,7 @@ $$
 Then, the range equation between the Tag and each Anchor can be written as:
 
 $$
-\|\mathbf{x} - \mathbf{p}_i\|^2 = r_i^2, \quad i = 1,2,3,4
+\||\mathbf{x} - \mathbf{p}_i\||^2 = r_i^2, \quad i = 1,2,3,4
 $$
 
 Since this equation is nonlinear, the first Anchor is used as a reference to linearize the system.
